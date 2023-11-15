@@ -25,7 +25,20 @@ allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
 
 allow hal_fingerprint_default mnt_vendor_file:dir search;
 
-allowxperm hal_fingerprint_default fingerprint_vendor_data_file:file ioctl DMA_BUF_IOCTL_SYNC;
+# Allow hal_fingerprint_default to write to the proc filesystem
+allow hal_fingerprint_default proc:file write;
+
+# Allow the tee context to write to debase_context on sda2
+allow tee vendor_persist_fingerprint_file:file write;
+
+# Allow hal_fingerprint_default to create directories in fingerprint_vendor_data_file
+allow hal_fingerprint_default fingerprint_vendor_data_file:dir create;
+
+# Allow hal_fingerprint_default to open /proc/tee_bind_core
+allow hal_fingerprint_default proc:file open;
+
+# Allow hal_fingerprint_default to read the file with the serialno_prop context on tmpfs
+allow hal_fingerprint_default tmpfs:file { read };
 
 rw_dir_file(hal_fingerprint_default, vendor_persist_fingerprint_file)
 rw_dir_file(hal_fingerprint_default, vendor_proc_display)
