@@ -48,14 +48,8 @@
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
             <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/alert_slider_summary" />
-            <meta-data
-                android:name="com.android.settings.icon"
-                android:resource="@drawable/ic_alter_slider" />
-            <meta-data
                 android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.system" />
+                android:value="com.android.settings.category.ia.sound" />
         </activity>
 
         <service
