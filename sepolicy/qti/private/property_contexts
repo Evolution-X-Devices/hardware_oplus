@@ -10,14 +10,12 @@ persist.sys.oplus.autotest.    u:object_r:exported_system_prop:s0
 persist.sys.bt.a2dp.pendingtime    u:object_r:exported_system_prop:s0
 
 # Camera
-
 NA                                     u:object_r:exported_system_prop:s0
-cam.algo.                        u:object_r:exported_system_prop:s0
-com.oplus.camera.                u:object_r:exported_system_prop:s0
+cam.algo.                              u:object_r:exported_system_prop:s0
+com.oplus.camera.                      u:object_r:exported_system_prop:s0
 oplus.camera.                          u:object_r:exported_system_prop:s0
 oppo.camera.                           u:object_r:exported_system_prop:s0
 persist.camera.                        u:object_r:exported_system_prop:s0
-persist.camera.                  u:object_r:exported_system_prop:s0
 persist.sys.camera.lao.enable          u:object_r:exported_system_prop:s0
 persist.vendor.aps.debug.framenum      u:object_r:exported_system_prop:s0
 persist.vendor.apsSN.algo.enable       u:object_r:exported_system_prop:s0
